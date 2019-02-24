@@ -1,6 +1,8 @@
 PHP FPM
 =======
 
+[![Build Status](https://travis-ci.org/in2it-ansible/php_fpm.svg?branch=master)](https://travis-ci.org/in2it-ansible/php_fpm)
+
 A stand-alone PHP-FPM server running on Debian 9 ("Stretch") that will listen on a port instead of a socket.
 
 Requirements
