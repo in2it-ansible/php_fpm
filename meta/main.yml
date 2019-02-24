@@ -1,0 +1,22 @@
+galaxy_info:
+  author: Michelangelo van Dam
+  description: A quick setup to run a remote PHP-FPM instance
+  company: In2it
+
+  issue_tracker_url: https://https://github.com/in2it-ansible/php_fpm/issues
+
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+
+  galaxy_tags:
+    - php
+    - fpm
+    - standalone
+
+dependencies: []

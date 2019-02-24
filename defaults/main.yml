@@ -1,0 +1,32 @@
+---
+# defaults file for php_fpm
+
+php_timezone: UTC
+php_apt_list: "deb https://packages.sury.org/php/ {{ ansible_lsb.codename }} main"
+php_apt_keyid: AC0E47584A7A714D
+php_apt_key: https://packages.sury.org/php/apt.gpg
+php_version: 7.3
+php_app_path: /var/www/app
+php_fpm_port: 9000
+php_log_level: warn
+
+package:
+  - "php{{ php_version }}-bcmath"
+  - "php{{ php_version }}-bz2"
+  - "php{{ php_version }}-cli"
+  - "php{{ php_version }}-common"
+  - "php{{ php_version }}-curl"
+  - "php{{ php_version }}-fpm"
+  - "php{{ php_version }}-gd"
+  - "php{{ php_version }}-intl"
+  - "php{{ php_version }}-json"
+  - "php{{ php_version }}-mbstring"
+  - "php{{ php_version }}-mysql"
+  - "php{{ php_version }}-opcache"
+  - "php{{ php_version }}-readline"
+  - "php{{ php_version }}-soap"
+  - "php{{ php_version }}-tidy"
+  - "php{{ php_version }}-xml"
+  - "php{{ php_version }}-xmlrpc"
+  - "php{{ php_version }}-xsl"
+  - "php{{ php_version }}-zip"

@@ -1,0 +1,5 @@
+---
+# vars file for php_fpm
+
+php_timezone: Europe/Brussels
+php_version: 7.2
