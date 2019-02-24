@@ -21,6 +21,8 @@ These are the variables defined in `defaults/main.yml` which can be overridden i
 - **php_apt_key:** The location of the APT GPG key for this APT repo (default: https://packages.sury.org/php/apt.gpg)
 - **php_version:** The PHP version you want to use (default: 7.3)
 - **php_app_path:** The location where your PHP files are kept (default: /var/www/app)
+- **php_app_group:** The application user group (default: php)
+- **php_app_user:** The application user name (default: php)
 - **php_fpm_port:** The port PHP-FPM listens on (default: 9000)
 - **php_log_level:** The log level you want to have (default: warn)
 - **package:** A list of PHP packages you want to install (default: most common ones)

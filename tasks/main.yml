@@ -24,13 +24,13 @@
 
 - name: Create app group
   group:
-    name: php
+    name: "{{ php_app_group }}"
     state: present
 
 - name: Create app user
   user:
-    name: php
-    group: php
+    name: "{{ php_app_user }}"
+    group: "{{ php_app_group }}"
     state: present
 
 - name: Install PHP
