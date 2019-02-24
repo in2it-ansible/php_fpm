@@ -1,0 +1,51 @@
+---
+
+- name: Set timezone
+  timezone:
+    name: "{{ php_timezone }}"
+
+- name: Install PHP key
+  apt_key:
+    id: "{{ php_apt_keyid }}"
+    url: "{{ php_apt_key }}"
+    state: present
+    keyring: /etc/apt/trusted.gpg.d/ansible.gpg
+  register: php_key_install
+  until: php_key_install is success
+  retries: 3
+  delay: 2
+
+- name: Add official PHP repository
+  apt_repository:
+    repo: "{{ php_apt_list }}"
+    state: present
+    filename: "php"
+
+- name: Create app group
+  group:
+    name: "{{ php_app_group }}"
+    state: present
+
+- name: Create app user
+  user:
+    name: "{{ php_app_user }}"
+    group: "{{ php_app_group }}"
+    state: present
+
+- name: Install PHP
+  apt:
+    name: "{{ package }}"
+    state: present
+    update_cache: true
+  register: php_install
+  until: php_install is success
+  retries: 3
+  delay: 2
+
+- name: Create application directory
+  file:
+    path: "{{ php_app_path }}"
+    state: directory
+    mode: 0755
+    owner: "{{ php_app_user }}"
+    group: "{{ php_app_group }}"

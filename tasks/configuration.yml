@@ -1,0 +1,7 @@
+---
+
+- name: Set PHP-FPM Pool config
+  template:
+    src: php-fpm.conf
+    dest: "/etc/php/{{ php_version }}/fpm/pool.d/www.conf"
+  notify: restart php-fpm
