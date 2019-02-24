@@ -48,8 +48,8 @@
     path: "{{ php_app_path }}"
     state: directory
     mode: 0755
-    owner: php
-    group: php
+    owner: "{{ php_app_user }}"
+    group: "{{ php_app_group }}"
 
 - name: Set PHP-FPM Pool config
   template:
