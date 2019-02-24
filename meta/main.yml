@@ -3,7 +3,7 @@ galaxy_info:
   description: A quick setup to run a remote PHP-FPM instance
   company: In2it
 
-  issue_tracker_url: https://https://github.com/in2it-ansible/php_fpm/issues
+  issue_tracker_url: https://github.com/in2it-ansible/php_fpm/issues
 
   license: MIT
 
