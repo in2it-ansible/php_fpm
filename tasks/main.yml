@@ -5,6 +5,6 @@
   tags:
     - install
 
-- import_task: configuration.yml
+- import_tasks: configuration.yml
   tags:
     - config
